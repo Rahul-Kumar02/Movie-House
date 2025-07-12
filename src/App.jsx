@@ -12,7 +12,7 @@ function App() {
   const fetchApi = async (search) => {
 
     try {
-      const movie_url = `http://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${search}`;
+      const movie_url = `https://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${search}`;
       const res = await axios.get(movie_url);
       setMovies(res.data.Search || [])
       console.log(res.data.Search || []);
